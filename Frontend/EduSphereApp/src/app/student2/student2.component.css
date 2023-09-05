@@ -1,0 +1,214 @@
+/* Reset default margin and padding */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body{
+  background-color: rgb(65, 123, 123);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: auto;
+    margin-top: 70px;
+    
+    box-sizing: border-box;
+}
+
+.assignment-item {
+  border-radius: 15px;
+
+    flex: 0 0 calc(25% - 20px);
+    border: 1px solid #ccc;
+    background-color:white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    position: relative; /* Add position relative to create a stacking context */
+
+  transition: transform 0.3s ease-in-out;
+}
+.assignment-item:hover {
+  transform: translateY(-30px); /* Move the container up on hover */
+}
+
+.assignment-item h1 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.assignment-item h3 {
+    font-size: 15px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.assignment-item h4 {
+    font-size: 16px;
+    margin: 5px 0;
+   
+}
+
+.assignment-item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.assignment-item Button:hover {
+   /* Make the button visible on hover */
+   opacity: 1;
+}
+
+
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+}
+
+.notification-message {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.notification-button {
+  background-color: rgb(65, 123, 123);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.notification-button:hover {
+  background-color: rgb(65, 123, 123);
+}
+
+
+.assignment-item Button {
+    background-color: #3d6d7a;
+    color: white;
+    margin-left: 40px;
+    bottom: -30px; /* Initially hide the button below the container */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Center the button horizontally */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    opacity: 0;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: bottom 0.3s ease-in-out;
+}
+/* Style for the chat icon button */
+button.mat-icon-button {
+    position: fixed;
+    background-color: red;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  /* Style for the chat drawer */
+  mat-drawer.xx {
+    background-color: white;
+   
+    width: 300px; /* Set the width of the chat drawer as needed */
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden to the right */
+    height: 100%; /* Adjust the height as needed */
+    transition: right 0.3s ease-in-out; /* Add smooth animation for opening/closing */
+    
+    z-index: 999; /* Ensure it's above other elements */
+  }
+  
+  /* Style for the container within the drawer */
+  mat-drawer.xx .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for the chat messages and input container */
+  mat-drawer.xx .chat-container {
+    flex-grow: 1;
+    overflow-y: auto; /* Enable scrolling for chat messages */
+    padding: 10px;
+  }
+  
+  mat-drawer.xx .message {
+    margin: 5px 0; /* Add spacing between messages */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  mat-drawer.xx .message.user {
+    background-color: #e0e0e0; /* Background color for user messages */
+    text-align: right; /* Align user messages to the right */
+  }
+  
+  mat-drawer.xx .message.chatbot {
+    background-color: #f1f1f1; /* Background color for chatbot messages */
+    text-align: left; /* Align chatbot messages to the left */
+  }
+  
+  /* Style for chat input and send button */
+  mat-drawer.xx input[type="text"] {
+    flex-grow: 1; /* Allow the input field to grow within its container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  mat-drawer.xx button {
+    padding: 10px 20px;
+    background-color: #468292; /* Background color for the send button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  mat-drawer.xx button:hover {
+    background-color: #417788; /* Background color when hovering over the send button */
+  }
+  /* Style for the chatbot section background with a background image */
+mat-drawer.xx .chatbot-container {
+   background-color: #39747d;
+    background-size: cover; /* Adjust the background size as needed */
+    padding: 10px;
+    color: #fff; /* Set text color to contrast with the background image */
+  }
+  
+  /* Show the chat drawer when it's open */
+  .mat-drawer-opened.xx {
+    right: 0;
+    transition: right 0.3s ease-in-out; /* Add smooth animation for opening/closing */
+  }

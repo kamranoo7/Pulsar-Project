@@ -1,0 +1,130 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4f7470;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 100px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    background-color: #4f7470;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4f7470;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+   
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #4f7470;
+  }
+  .instructor-form {
+    text-align: center; /* Center the form within the container */
+  }
+  
+  .form-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */
+  }
+  
+  .column {
+    flex: 0 0 48%; /* Adjust the width of the columns as needed */
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #4f7470;
+    border: none;
+    color: white;
+    padding: 10px;
+  }
+  
+  button:hover {
+    background-color: #4f7470;
+  }
+  a {
+    color:#4f7470;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color:#4f7470;
+  }
+  

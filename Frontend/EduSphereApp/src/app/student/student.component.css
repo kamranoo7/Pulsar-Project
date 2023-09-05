@@ -1,0 +1,121 @@
+/* Reset default margin and padding */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply basic styling to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4f7470;
+    padding-bottom:500px;
+}
+
+/* Style the container */
+/* Style the container */
+/* Style the container */
+.registration-container {
+  text-align: center;
+  margin-left: 22%;
+  margin-top: 100px;
+  padding-bottom:200px ;
+  border: 2px solid #4f7470;
+}
+
+.student-form {
+  position: fixed;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.student-form h2 {
+  color: #333;
+}
+
+.form-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Add spacing between the columns */
+}
+
+.form-group {
+  width: 48%; /* 4 items per column */
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Style the input fields as single horizontal lines */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+select {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style the select arrow (optional) */
+select {
+  /* Replace with your arrow icon */
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Add color to form elements */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+select {
+  background-color: transparent;
+}
+
+button[type="submit"] {
+  background-color: #4f7470;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Add color to links */
+a {
+  color:#4f7470;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:#4f7470;
+}
